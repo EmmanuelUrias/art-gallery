@@ -17,6 +17,14 @@ function App() {
   }, [artId])  
 
   const handleIterate = e => {
+    if (artId + Number(e.target.value) > 471581) {
+      setArtId(471581)
+    } else if (artId + Number(e.target.value) < 1) {
+      setArtId(1)
+    }
+    else {
+      setArtId(artId + Number(e.target.value))
+    }
     setArtId(artId + Number(e.target.value)) 
   }
 
