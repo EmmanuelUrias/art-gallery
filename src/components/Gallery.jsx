@@ -2,11 +2,13 @@ import React from "react";
 
 function Gallery(props) {
     return (
-        <div style={{'width' : '100%'}}>
+        <div>
+            <div className="container" style={{}}>
             <p><strong>{props.title}</strong></p>
-            <p>{props.artist}</p>
+            <p><strong>{props.artist}</strong></p>
             <p>{props.medium}</p>
-            <img src={props.primaryImage} alt={props.title}></img>
+            </div>
+            {props.primaryImage ? <img src={props.primaryImage} alt={props.title}></img> : 'No Image!!'}
         </div>
     )
 }
